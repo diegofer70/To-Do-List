@@ -1,0 +1,143 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .todo-container {
+    background: #ffffff;
+    color: #333;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2575fc;
+  }
+  
+  /* Estilo do input e botão */
+  .todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 5px #2575fc;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #2575fc;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1a4fbf;
+  }
+  
+  /* Estilo da lista de tarefas */
+  #taskList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f9;
+    color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .task:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task span {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .task.completed span {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  /* Estilo dos botões da tarefa */
+  .task button {
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .task button:first-of-type {
+    color: #28a745;
+  }
+  
+  .task button:first-of-type:hover {
+    color: #1e7e34;
+  }
+  
+  .task button:last-of-type {
+    color: #dc3545;
+  }
+  
+  .task button:last-of-type:hover {
+    color: #a71d2a;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  
+    .todo-input {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  
